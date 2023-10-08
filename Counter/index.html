@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="All">
+      <h1 id="Number"></h1>
+      <form>
+        <input type="button" value="DECREASE" onclick="Dec()" />
+        <input type="reset" value="RESET" onclick="Reset()" />
+        <input type="button" value="INCREASE" onclick="Incre()" />
+      </form>
+    </div>
+    <script>
+      var a = 0;
+      document.getElementById("Number").innerHTML = a;
+      a = document.getElementById("Number").textContent;
+      function Dec() {
+        a = parseInt(document.getElementById("Number").textContent);
+        document.getElementById("Number").innerHTML = a - 1;
+        updateColor();
+      }
+      function Incre() {
+        a = parseInt(document.getElementById("Number").textContent);
+        document.getElementById("Number").innerHTML = a + 1;
+        updateColor();
+      }
+      function Reset() {
+        a = 0;
+        document.getElementById("Number").innerHTML = a;
+        updateColor();
+      }
+      function updateColor() {
+        if (a > 0) {
+          document.getElementById("Number").style.color = "green";
+        } else if (a < 0) {
+          document.getElementById("Number").style.color = "red";
+        } else if (a === 0) {
+          document.getElementById("Number").style.color = "black";
+        } else {
+          document.getElementById("Number").style.color = "black";
+        }
+      }
+    </script>
+  </body>
+</html>
