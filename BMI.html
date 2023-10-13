@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let wzrost = prompt("Podaj Wzrost");
+        let masa = prompt("Podaj wage");
+        let wzrost2 = wzrost * wzrost
+        let bmi = masa/wzrost2
+        let bmi2 = bmi*10000
+        function waga(bmi2){
+        if(bmi2 < 16){
+            alert("Wygłodzenie")
+            console.log(bmi2)
+        }
+        else if (bmi2 >= 16 && bmi2 <= 16.99){
+            alert("Wychudzenie")
+            console.log(bmi2)
+        }
+        else if (bmi2 >=17 && bmi2 <= 18.49){
+            alert("Niedowaga")
+            console.log(bmi2)
+        }
+        else if (bmi2 >= 18.5 && bmi2 <= 24.99){
+            alert("Normalna Waga")
+            console.log(bmi2)
+        }
+        else {
+            alert("Nadwaga")
+        }
+    }
+
+        waga(bmi2)
+    </script>
+    
+</body>
+</html>
