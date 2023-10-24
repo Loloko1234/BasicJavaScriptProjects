@@ -1,0 +1,17 @@
+input {
+  background-color: darkturquoise;
+  width: 50%;
+  height: 4rem;
+  font-size: 50px;
+  margin: 9em;
+  box-shadow: 2px 2px 2px black;
+}
+#button:hover {
+  background-color: deepskyblue;
+}
+
+#button:active {
+  background-color: deepskyblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
